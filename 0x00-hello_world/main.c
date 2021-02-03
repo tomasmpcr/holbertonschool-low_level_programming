@@ -7,6 +7,5 @@
  */
 int main(void)
 {
-    printf("--- HELLO IN C --- \n");
     return (0);
 }
