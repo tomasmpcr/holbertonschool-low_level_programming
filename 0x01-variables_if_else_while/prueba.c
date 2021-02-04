@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -9,13 +8,9 @@
  */
 int main(void)
 {
-	int x, tw;
-
-	for (x = 'A'; x <= 'Z'; x++)
-	{
-		tw = tolower(x);
-		putchar(tw);
-	}
+	int x = 'A';
+	x = tolower(x);
+	putchar(x);
 	putchar('\n');
 	return (0);
 }

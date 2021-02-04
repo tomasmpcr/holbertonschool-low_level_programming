@@ -28,7 +28,7 @@ int main(void)
 
 	if (ld == 0)
 	{
-		printf(" and is 0\n");
+		printf(" id %d and is 0\n", ld);
 	}
 	else if (ld < 6)
 	{

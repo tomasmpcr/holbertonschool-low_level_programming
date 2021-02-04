@@ -16,6 +16,12 @@ int main(void)
 		tw = tolower(x);
 		putchar(tw);
 	}
+
+	for (x = 'A'; x <= 'Z'; x++)
+        {
+                putchar(x);
+        }
+
 	putchar('\n');
 	return (0);
 }
