@@ -31,17 +31,22 @@ int main(void)
 					putchar(r);
 					putchar(f);
 
-
-					putchar(',');
-					putchar(' ');
+					if (i == '9' && j == '8' && r == '9' && f == '9')
+					{
+						putchar('\n');
+					}
+					else
+					{
+						putchar(',');
+						putchar(' ');
+					}
 				}
 				f = '0';
 			}
 		}
 
-		if (i == '9' && j == '8' && r == '9' && f == '9')
+		if (i == '9' && j == '9' && r == '9' && f == '9')
 		{
-			putchar('\n');
 			break;
 		}
 	}
