@@ -9,7 +9,7 @@
  */
 int main(void)
 {
-	int d1, u1, d2, u2 = '1';
+	int d1, u1, d2, u2, i;
 
 	for (d1 = '0'; d1 <= '9'; d1++)
 	{
@@ -17,33 +17,25 @@ int main(void)
 		{
 			for (d2 = '0'; d2 <= '9'; d2++)
 			{
-				for (; u2 <= '9'; u2++)
+				if (d1 == d2)
+				{
+					i = u1 + 1;
+				}
+				else
+				{
+					i = 0;
+				}
+				
+				for (u2 = i; u2 <= '9'; u2++)
 				{
 					putchar(d1);
 					putchar(u1);
 					putchar(' ');
 					putchar(d2);
 					putchar(u2);
-
-					if (d1 == '9' && u1 == '8' && d2 == '9' && u2 == '9')
-					{
-						putchar('\n');
-						goto TERMINAR;
-					}
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-				if (d1 == d2)
-				{
-					u2 = u1 + 1;
 				}
 			}
 		}
 	}
-
-TERMINAR:
 	return (0);
 }
