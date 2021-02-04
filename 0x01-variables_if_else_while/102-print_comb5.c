@@ -19,7 +19,7 @@ int main(void)
 			{
 				if (d1 == d2)
 				{
-					i = u1 + '1';
+					i = u1 + 1;
 				}
 				else
 				{
