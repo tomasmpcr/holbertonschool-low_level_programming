@@ -9,19 +9,18 @@
  */
 int main(void)
 {
-	int x, tw;
+int x, y;
 
-	for (x = 'A'; x <= 'Z'; x++)
-	{
-		tw = tolower(x);
-		putchar(tw);
-	}
+for (x = 'a'; x <= 'z'; x++)
+{
+putchar(x);
+}
 
-	for (x = 'A'; x <= 'Z'; x++)
-        {
-                putchar(x);
-        }
+for (y = 'A'; y <= 'Z'; y++)
+{
+putchar(y);
+}
 
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
