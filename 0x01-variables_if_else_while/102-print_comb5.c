@@ -33,6 +33,9 @@ int main(void)
 					putchar(' ');
 					putchar(d2);
 					putchar(u2);
+					
+					putchar(',');
+					putchar(' ');
 				}
 			}
 		}
