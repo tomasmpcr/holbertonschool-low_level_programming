@@ -28,7 +28,7 @@ int main(void)
 					if (i == '9' && j == '8' && r == '9' && f == '9')
 					{
 						putchar('\n');
-						break;
+						return (0);
 					}
 					else
 					{
