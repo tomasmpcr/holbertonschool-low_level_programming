@@ -16,9 +16,9 @@ int main(void)
 		putchar(x);
 	}
 
-	for (x = '0'; x <= '9'; x++)
+	for (y = 'A'; y <= 'F'; y++)
 	{
-		putchar(x);
+		putchar(y);
 	}
 
 	putchar('\n');
