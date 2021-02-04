@@ -15,12 +15,6 @@ int main(void)
 	{
 		for (j = '0'; j <= '9'; j++)
 		{
-
-			if (i == '9' && j == '9')
-			{
-				break;
-			}
-
 			for (r = '0'; r <= '9'; r++)
 			{
 				for (; f <= '9'; f++)
@@ -34,6 +28,7 @@ int main(void)
 					if (i == '9' && j == '8' && r == '9' && f == '9')
 					{
 						putchar('\n');
+						goto TERMINAR;
 					}
 					else
 					{
@@ -46,5 +41,6 @@ int main(void)
 		}
 	}
 
+TERMINAR:
 	return (0);
 }
