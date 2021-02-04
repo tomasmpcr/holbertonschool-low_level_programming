@@ -44,11 +44,6 @@ int main(void)
 				f = '0';
 			}
 		}
-
-		if (i == '9' && j == '9' && r == '9' && f == '9')
-		{
-			break;
-		}
 	}
 
 	return (0);
