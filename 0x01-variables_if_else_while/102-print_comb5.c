@@ -9,23 +9,23 @@
  */
 int main(void)
 {
-	int i, j, r, f = '1';
+	int d1, u1, d2, u2 = '1';
 
-	for (i = '0'; i <= '9'; i++)
+	for (d1 = '0'; d1 <= '9'; d1++)
 	{
-		for (j = '0'; j <= '9'; j++)
+		for (u1 = '0'; u1 <= '9'; u1++)
 		{
-			for (r = '0'; r <= '9'; r++)
+			for (d2 = '0'; d2 <= '9'; d2++)
 			{
-				for (; f <= '9'; f++)
+				for (; u2 <= '9'; u2++)
 				{
-					putchar(i);
-					putchar(j);
+					putchar(d1);
+					putchar(u1);
 					putchar(' ');
-					putchar(r);
-					putchar(f);
+					putchar(d2);
+					putchar(u2);
 
-					if (i == '9' && j == '8' && r == '9' && f == '9')
+					if (d1 == '9' && u1 == '8' && d2 == '9' && u2 == '9')
 					{
 						putchar('\n');
 						goto TERMINAR;
@@ -36,7 +36,10 @@ int main(void)
 						putchar(' ');
 					}
 				}
-				f = '0';
+				if (d1 == d2)
+				{
+					u2 = u1 + 1;
+				}
 			}
 		}
 	}
