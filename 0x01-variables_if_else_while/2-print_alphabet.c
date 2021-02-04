@@ -9,12 +9,11 @@
  */
 int main(void)
 {
-	char x, tw;
+	char x;
 
-	for (x = 'A'; x <= 'Z'; x++)
+	for (x = 'a'; x <= 'z'; x++)
 	{
-		tw = tolower(x);
-		putchar(tw);
+		putchar(x);
 	}
 	putchar('\n');
 	return (0);
