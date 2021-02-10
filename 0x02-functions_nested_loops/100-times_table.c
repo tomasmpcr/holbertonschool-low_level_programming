@@ -40,17 +40,7 @@ void print_times_table(int n)
 			{
 				cal = i * j;
 
-
-				if (cal != 0)
-				{
-					print_the_int(cal);
-				}
-				else
-				{
-					_putchar('0');
-				}
-
-				if (j != n)
+				if (j != 0)
 				{
 					_putchar(',');
 					_putchar(' ');
@@ -60,6 +50,15 @@ void print_times_table(int n)
 
 					if (cal < 100)
 						_putchar(' ');
+				}
+
+				if (cal != 0)
+				{
+					print_the_int(cal);
+				}
+				else
+				{
+					_putchar('0');
 				}
 			}
 			_putchar('\n');
