@@ -30,6 +30,9 @@ void print_1_14(void)
 
 	for (i = 0; i <= 14; i++)
 	{
+		if (i == 0)
+			_putchar('0');
+
 		print_number(i);
 	}
 }
