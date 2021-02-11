@@ -26,7 +26,11 @@ void print_number(int n)
 	if (cal != 0)
 	{
 		print_number(cal);
-		_putchar((cal % 10) + '0');
+		_putchar((n % 10) + '0');
+	}
+	else
+	{
+		_putchar(n + '0');
 	}
 
 }
