@@ -24,13 +24,7 @@ void print_number(int n)
 	cal =  n / 10;
 
 	if (cal != 0)
-	{
 		print_number(cal);
-		_putchar((n % 10) + '0');
-	}
-	else
-	{
-		_putchar(n + '0');
-	}
 
+	_putchar((n % 10) + '0');
 }
