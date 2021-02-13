@@ -1,4 +1,5 @@
 #!/bin/bash
+#git config --global credential.helper wincred
 
 git pull
 git add . --all
