@@ -30,8 +30,43 @@ char _sumaSignos(char signo, char nuevo)
 }
 
 
+
 /**
- * _atoi_atoi - loco..
+ * _calN - loco..
+ *@s: char
+ *@j: len
+ *@signo: char
+ *
+ * Return: int.
+ */
+int _calN(char *s, int j, char signo)
+{
+	int inc = 1, n = 0;
+
+	for (; j >= 0; j--)
+	{
+		if (s[j] >= '0' && s[j] <= '9')
+		{
+			n = n + ((s[j] - '0') * inc);
+			inc = inc * 10;
+		}
+	}
+
+	if (signo == '-')
+	{
+		if (n > 0)
+		n = -n;
+	}
+
+	return (n);
+}
+
+
+
+
+
+/**
+ * _atoi - loco..
  *@s: char
  *
  * Return: int.
@@ -39,11 +74,9 @@ char _sumaSignos(char signo, char nuevo)
 int _atoi(char *s)
 {
 	char signo = '+';
-	int i, j = 0, n = 0, inc = 1, paso = 0, block = 0, primSigno = 0;
-
+	int i, j = 0, n = 0, paso = 0, block = 0, primSigno = 0;
 	for (i = 0; s[i] != '\0'; i++)
 	{
-
 		if (block == 0)
 		{
 			if (s[i] == '+' || s[i] == '-')
@@ -71,24 +104,8 @@ int _atoi(char *s)
 		else
 			break;
 	}
-
 	if (block == 0)
 		j = i;
-
-	for (; j >= 0; j--)
-	{
-		if (s[j] >= '0' && s[j] <= '9')
-		{
-			n = n + ((s[j] - '0') * inc);
-			inc = inc * 10;
-		}
-	}
-
-	if (signo == '-')
-	{
-		if (n > 0)
-			n = -n;
-	}
-
+	n = _calN(s, j, signo);
 	return (n);
 }
