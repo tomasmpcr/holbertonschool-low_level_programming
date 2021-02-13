@@ -75,6 +75,7 @@ int _atoi(char *s)
 {
 	char signo = '+';
 	int i, j = 0, n = 0, paso = 0, block = 0, primSigno = 0;
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (block == 0)
