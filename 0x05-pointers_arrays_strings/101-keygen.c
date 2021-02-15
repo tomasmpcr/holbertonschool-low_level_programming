@@ -1,4 +1,6 @@
+#include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 /**
  * main - paso
@@ -7,5 +9,5 @@
  */
 int main(void)
 {
-return (0);
+	return (0);
 }
