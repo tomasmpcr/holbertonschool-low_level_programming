@@ -8,14 +8,12 @@
  */
 int _atoi(char *s)
 {
-	int n = 0, i, calSig = 0, terminar = 0;
+	int n = 0, i, calSig = 1, terminar = 0;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '+')
-			calSig++;
-		else if (s[i] == '-')
-			calSig--;
+		if (s[i] == '-')
+			calSig *= -1;
 
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -29,8 +27,7 @@ int _atoi(char *s)
 		}
 	}
 
-	if (calSig < 0)
-		n = -n;
+	n = n * calSig;
 
 	return (n);
 }
