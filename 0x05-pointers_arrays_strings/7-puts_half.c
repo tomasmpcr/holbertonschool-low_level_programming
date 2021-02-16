@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "2-strlen.c"
 
 /**
  * puts_half - loco..
@@ -8,12 +9,7 @@
  */
 void puts_half(char *str)
 {
-	int i, j = 0;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-	}
-
+	int j = 0, i = _strlen(str);
 
 	j = i / 2;
 
