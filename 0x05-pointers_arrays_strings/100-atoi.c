@@ -8,23 +8,17 @@
  */
 int _atoi(char *s)
 {
-	int n = 0, i = 0, calSig = 1;
+	int n = 0, i, calSig = 1;
 
-	while (*(s + i) != '\n')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*(s + i) == '-')
+		if (s[i] == '-')
 			calSig *= -1;
 
-		if (*(s + i) >= '0' && *(s + i) <= '9')
-		{
-			n = (n * 10) + (*(s + i) - '0');
-			if (*(s + (i + 1)) < '0' || *(s + (i + 1)) > '9')
-			{
-				n *= calSig;
-				break;
-			}
-		}
-		i++;
+		if (s[i] >= '0' && s[i] <= '9')
+			n = n * 10 + calSig * (*(s + i) - '0');
+		else if (n != 0)
+			break;
 	}
 
 	return (n);
