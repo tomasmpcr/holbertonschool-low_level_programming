@@ -8,20 +8,22 @@
  */
 char *cap_string(char *c)
 {
-	int i, j, a;
+	int i, j, l, a;
 	char car[] = {' ', '\t', 10, 44, 59, 46, '!', '?', '"', '(', ')', '{', '}'};
 
-	a = sizeof(car) / sizeof(char);
+	l = sizeof(car) / sizeof(char);
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		if (c[i] >= 'a' && c[i] <= 'z')
 		{
-			for (j = 0; j < a; j++)
+			a = c[i - 1];
+
+			for (j = 0; j < l; j++)
 			{
-				if (c[i - 1] == car[j])
+				if (a == car[j])
 				{
-					c[i] = c[i] - 32;
+					c[i] -= 32;
 				}
 			}
 		}
