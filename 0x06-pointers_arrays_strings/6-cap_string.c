@@ -1,11 +1,11 @@
 #include "holberton.h"
 
 /**
- *cap_string - 8 (el culo te abrocho)
- *@c: *
- *
- *Return: *
- */
+* cap_string - convert lowercase first letter from a separator
+* @c: the string given
+* ---------------------------------------
+* Return: new string
+*/
 char *cap_string(char *c)
 {
 	unsigned int  i, j;
