@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "_strlen.c"
 
 /**
  * _strcat - DxC3=D
