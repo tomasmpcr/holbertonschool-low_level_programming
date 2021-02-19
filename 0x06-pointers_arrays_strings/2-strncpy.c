@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "_strlen.c"
 
 /**
  * _strlen - loco..
