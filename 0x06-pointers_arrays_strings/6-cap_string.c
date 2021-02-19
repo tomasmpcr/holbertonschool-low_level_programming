@@ -15,16 +15,13 @@ char *cap_string(char *c)
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] >= 'a' && c[i] <= 'z')
+		a = c[i - 1];
+		for (j = 0; j < l; j++)
 		{
-			a = c[i - 1];
-
-			for (j = 0; j < l; j++)
+			if (a == car[j] && a >= 'a' && a <= 'z')
 			{
-				if (a == car[j])
-				{
-					c[i] -= 32;
-				}
+				c[i] -= 32;
+				break;
 			}
 		}
 	}
