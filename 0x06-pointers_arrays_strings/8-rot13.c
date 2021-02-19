@@ -17,7 +17,10 @@ char *rot13(char *c)
 		for (j = 0; comp[j] != '\0'; j++)
 		{
 			if (c[i] == comp[j])
+			{
 				c[i] = sus[j];
+				break;
+			}
 		}
 	}
 
