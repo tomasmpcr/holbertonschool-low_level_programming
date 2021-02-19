@@ -1,6 +1,27 @@
 #include "holberton.h"
 
 /**
+ *comprobar - jaja
+ *@c: char
+ *
+ *Return: int
+ */
+int comprobar(char c)
+{
+	int paso = 0;
+
+	if (c == ' ' || c == '\t' || c == '\n' || c == ',')
+		paso = 1;
+	else if (c == ';' || c == '.' || c == '!' || c == '?')
+		paso = 1;
+	else if (c == '"' || c == '(' || c == ')' || c == '{' || c == '}')
+		paso = 1;
+
+	return (paso);
+}
+
+
+/**
  *cap_string - 8 (el culo te abrocho)
  *@c: *
  *
@@ -8,18 +29,14 @@
  */
 char *cap_string(char *c)
 {
-	unsigned int i, j;
-	char car[] = {' ', '\t', 10, 44, 59, 46, '!', '?', '"', '(', ')', '{', '}'};
+	int i;
 
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		for (j = 0; j < sizeof(car); j++)
+		if (c[i] >= 'a' && c[i] <= 'z')
 		{
-			if (c[i] == car[j] && c[i + 1] >= 97 && c[i + 1] <= 122)
-			{
-				c[i + 1] -= 32;
-				break;
-			}
+			if (comprobar(c[i - 1]))
+				c[i] -= 32;
 		}
 	}
 
