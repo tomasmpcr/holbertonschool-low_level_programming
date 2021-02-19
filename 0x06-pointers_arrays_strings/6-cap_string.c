@@ -18,7 +18,7 @@ char *cap_string(char *c)
 		a = c[i - 1];
 		for (j = 0; j < l; j++)
 		{
-			if (a == car[j] && a >= 'a' && a <= 'z')
+			if (a == car[j] && c[i] >= 'a' && c[i] <= 'z')
 			{
 				c[i] -= 32;
 				break;
