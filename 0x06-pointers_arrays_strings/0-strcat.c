@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "_strlen.c"
 
 /**
  * _strcat - DxC3=D
@@ -9,12 +10,12 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int i = 0, j = 0;
+	int i, destC = _strlen(dest), srcC = _strlen(src);
 
-	i = sizeof(dest) / sizeof(char);
-	j = sizeof(src) / sizeof(char);
-
-	printf("HOLA: %i, %i\n", i, j);
+	for (i = 0; i <= srcC; i++)
+	{
+		dest[destC + i] = src[i];
+	}
 
 	return dest;
 }
