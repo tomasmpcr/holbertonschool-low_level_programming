@@ -23,6 +23,10 @@ char *cap_string(char *c)
 				}
 			}
 		}
+		if (c[i] == '\t')
+		{
+			c[i] = ' ';
+		}
 	}
 
 	return (c);
