@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  *_strstr - imp
@@ -13,20 +14,22 @@ char *_strstr(char *haystack, char *needle)
 	int i, j;
 	char *p = &haystack[0];
 
-	for (i = 0, j = 0; haystack[i] != '\0'; i++, j++)
+	for (i = 0, j = 0; haystack[i] != '\0'; i++)
 	{
+		if (needle[j] == '\0')
+			break;
+
 		if (haystack[i] != needle[j])
 		{
 			p++;
 			j = 0;
 		}
-		else if (needle[j] == '\0')
-			break;
-
+		else
+			j++;
 	}
 
-	if (*p == '\0')
-		return (0);
+	if (j == 0)
+		return ("\0");
 
 	return (p);
 }
