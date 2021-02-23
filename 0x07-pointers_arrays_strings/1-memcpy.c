@@ -2,8 +2,8 @@
 
 /**
  *_memcpy - imp
- *@s: array
- *@b: asd
+ *@dest: array
+ *@src: asd
  *@n: int
  *
  *Return: char puntero
