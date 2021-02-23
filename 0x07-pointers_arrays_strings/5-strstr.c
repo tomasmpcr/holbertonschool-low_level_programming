@@ -30,5 +30,8 @@ char *_strstr(char *haystack, char *needle)
 
 	printf("%i\n", i - j);
 
+	if (j == 0)
+		return (0);
+
 	return (p);
 }
