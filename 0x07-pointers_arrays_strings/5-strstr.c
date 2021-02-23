@@ -21,14 +21,12 @@ char *_strstr(char *haystack, char *needle)
 
 		if (haystack[i] != needle[j])
 		{
-			p++;
 			j = 0;
+			p++;
 		}
 		else
 			j++;
 	}
-
-	printf("%i\n", i - j);
 
 	if (j == 0)
 		return (0);
