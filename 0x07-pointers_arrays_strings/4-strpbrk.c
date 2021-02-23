@@ -28,5 +28,11 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
+
+	if (!paso)
+	{
+		return (0);
+	}
+
 	return (s);
 }
