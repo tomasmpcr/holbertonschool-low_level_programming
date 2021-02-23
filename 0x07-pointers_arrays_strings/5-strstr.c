@@ -46,6 +46,10 @@ char *_strstr(char *haystack, char *needle)
 			j++;
 	}
 
+
+	printf("j: %i - l: %i", j, l);
+
+	printf("\n");
 	if (j == 0 || j < l)
 		return (0);
 
