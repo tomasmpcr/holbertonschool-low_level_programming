@@ -10,7 +10,7 @@
 
 char *_strchr(char *s, char c)
 {
-	for (; 1;s++)
+	for (; 1; s++)
 	{
 		if (s[0] == c)
 			break;
