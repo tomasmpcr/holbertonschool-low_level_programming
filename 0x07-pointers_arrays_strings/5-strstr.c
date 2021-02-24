@@ -2,24 +2,6 @@
 #include <stdio.h>
 
 /**
- * _strlen - loco..
- *@s: number
- *
- * Return: void.
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-	{
-	}
-
-	return (i);
-}
-
-
-/**
  *_strstr - imp
  *@haystack: array
  *@needle: char
@@ -29,28 +11,25 @@ int _strlen(char *s)
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, l = _strlen(needle);
+	int i, j, paso = 0;
 	char *p = haystack;
 
-	for (i = 0, j = 0; haystack[i] != '\0'; i++)
+	for (i = 0, j = 0; haystack[i] != '\0'; i++, j++)
 	{
-		if (needle[j] == '\0')
-			break;
-
 		if (haystack[i] != needle[j])
 		{
 			j = 0;
 			p++;
 		}
-		else
-			j++;
+
+		if (needle[j+1] == '\0')
+		{
+			paso = 1;
+			break;
+		}
 	}
 
-
-	printf("j: %i - l: %i", j, l);
-
-	printf("\n");
-	if (j == 0 || j < l)
+	if (!paso)
 		return (0);
 
 	return (p);
