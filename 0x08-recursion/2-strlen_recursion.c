@@ -1,10 +1,11 @@
 #include "holberton.h"
 
 /**
- *_strlen_recursion - print a int in form recurisive and contain the length the string
+ *_strlen_recursion - print a int in form recurisive
+ *and contain the length the string
  *@s: the string
  *-----------------------------------------------------
- *return: int
+ *Return: int
  */
 int _strlen_recursion(char *s)
 {
