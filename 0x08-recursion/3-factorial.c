@@ -4,7 +4,7 @@
  *factorial - print the result the factorial number
  *@n: the int
  *-----------------------------------------------------
- *return: int
+ *Return: int
  */
 int factorial(int n)
 {
