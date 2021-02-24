@@ -5,7 +5,7 @@
  *@x: the int
  *@y: the int
  *-----------------------------------------------------
- *return: int
+ *Return: int
  */
 int _pow_recursion(int x, int y)
 {
@@ -16,7 +16,7 @@ int _pow_recursion(int x, int y)
 	else if (y < 0)
 		return (-1);
 
-	n = x * _pow_recursion(x, y-1);
+	n = x * _pow_recursion(x, y - 1);
 
 	return (n);
 }
