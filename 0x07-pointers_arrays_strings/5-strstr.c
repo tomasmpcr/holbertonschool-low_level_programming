@@ -14,15 +14,19 @@ char *_strstr(char *haystack, char *needle)
 	int i, j, paso = 0;
 	char *p = haystack;
 
-	for (i = 0, j = 0; haystack[i] != '\0'; i++, j++)
+	for (i = 0, j = 0; haystack[i] != '\0'; i++)
 	{
 		if (haystack[i] != needle[j])
 		{
 			j = 0;
 			p++;
 		}
+		else
+		{
+			j++;
+		}
 
-		if (needle[j+1] == '\0')
+		if (needle[j] == '\0')
 		{
 			paso = 1;
 			break;
