@@ -9,18 +9,16 @@
  */
 int main(int argc, char **argv)
 {
-	int i, j, mul = 0, l = 0;
+	int i, j, mul = 0;
 	char *p;
 
 	for (i = 1; i < argc; i++)
 	{
-
-		l = sizeof(argv) / sizeof(argv[0]);
 		p = argv[i];
 
-		for (j = 0; j < l; j++)
+		for (j = 0; p[j] != '\0'; j++)
 		{
-			if (!isdigit(p[j]))
+			if ((p[j] >= 'a' && p[j] <= 'z') || (p[j] >= 'A' && p[j] <= 'Z'))
 			{
 				printf("Error\n");
 				return (1);
