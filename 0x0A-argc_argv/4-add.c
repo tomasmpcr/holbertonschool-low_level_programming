@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 
 		for (j = 0; p[j] != '\0'; j++)
 		{
-			if ((p[j] >= 'a' && p[j] <= 'z') || (p[j] >= 'A' && p[j] <= 'Z'))
+			if (p[j] < 48 || p[j] > 57)
 			{
 				printf("Error\n");
 				return (1);
