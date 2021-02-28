@@ -3,6 +3,8 @@
 
 /**
  *main - Print the number of the arguments
+ *@argc: int
+ *@argv: char
  *
  *return: int 0
  */
