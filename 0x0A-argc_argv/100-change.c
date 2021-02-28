@@ -3,14 +3,14 @@
 
 /**
  *main - print the number
+ *@argc: int
+ *@argv: char
  *
- *return: int
+ *Return: int
  */
 int main(int argc, char **argv)
 {
 	int i, importe = 0, monedas = 0;
-
-
 
 	if (argc == 2)
 	{
