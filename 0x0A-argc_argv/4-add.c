@@ -4,8 +4,10 @@
 
 /**
  *main - Print the number of the arguments
+ *@argc: int
+ *@argv: char
  *
- *return: int 0
+ *Return: int 0
  */
 int main(int argc, char **argv)
 {
