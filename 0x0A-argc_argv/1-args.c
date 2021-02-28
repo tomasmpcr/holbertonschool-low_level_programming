@@ -7,7 +7,7 @@
  *
  *Return: int 0
  */
-int main(int argc, char **argv)
+int main(int argc, char **argv __attribute__((unused)))
 {
 	*argv = 0;
 	printf("%i\n", argc);
