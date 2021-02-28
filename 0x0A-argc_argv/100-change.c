@@ -10,19 +10,13 @@
  */
 int main(int argc, char **argv)
 {
-	int i, importe = 0, monedas = 0;
+	int importe = 0, monedas = 0;
 
 	if (argc == 2)
 	{
 		importe = atoi(argv[1]);
 
-		if (importe <= 0)
-		{
-			printf("Error\n");
-			return (1);
-		}
-
-		for (i = 0; 1 == 1; i++)
+		for (; 1 == 1;)
 		{
 			if (importe >= 25)
 			{
