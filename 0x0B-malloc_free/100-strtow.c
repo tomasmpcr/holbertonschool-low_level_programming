@@ -106,7 +106,7 @@ char **strtow(char *str)
 		buffer[j][r] = str[i];
 		if (str[i + 1] == ' ' || str[i + 1] == '\0')
 		{
-			buffer[j][r] = '\0';
+			buffer[j][++r] = '\0';
 			j++;
 			r = 0;
 		}
