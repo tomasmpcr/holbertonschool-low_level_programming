@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- *strtow - create a table
+ *pal_len - create a new pal
  *@str: char
  *
  *Return: **char
@@ -43,7 +43,7 @@ int *len_pal(char *str, int l_pal)
 	int i, pal = 0, carac = 0;
 	int *buffer;
 
-	buffer = malloc(l_pal *sizeof(int));
+	buffer = malloc(l_pal * sizeof(int));
 	if (buffer == NULL)
 		return (NULL);
 
@@ -81,12 +81,10 @@ char **strtow(char *str)
 	char **buffer;
 
 	if (str == NULL || str == '\0' || l_pal == NULL)
-		return NULL;
-
+		return (NULL);
 	buffer = malloc((pal + 1) * sizeof(char));
 	if (buffer == NULL)
 		return (NULL);
-
 	for (i = 0; i < pal; i++)
 	{
 		buffer[i] = malloc((l_pal[i] + 1) * sizeof(char));
@@ -98,7 +96,6 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-
 	/*Rellenamos con los caracteres*/
 	for (i = 0, j = 0, r = 0; str[i] != '\0'; i++)
 	{
@@ -106,9 +103,7 @@ char **strtow(char *str)
 		{
 			continue;
 		}
-
 		buffer[j][r] = str[i];
-
 		if (str[i + 1] == ' ' || str[i + 1] == '\0')
 		{
 			buffer[j][r] = '\0';
@@ -118,8 +113,6 @@ char **strtow(char *str)
 		else
 			r++;
 	}
-
 	buffer[j] = NULL;
-
 	return (buffer);
 }
