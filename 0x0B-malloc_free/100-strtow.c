@@ -96,7 +96,6 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-	buffer[i] = '\0';
 	for (i = 0, j = 0, r = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
@@ -111,7 +110,7 @@ char **strtow(char *str)
 			r = 0;
 		}
 	}
-	buffer[j] = NULL;
+	buffer[j] = '\0';
 	free(l_pal);
 	return (buffer);
 }
