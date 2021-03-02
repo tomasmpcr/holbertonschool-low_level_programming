@@ -55,7 +55,7 @@ int *len_pal(char *str, int l_pal)
 			continue;
 		}
 
-		if (str[i + 1] == ' ' || str[i + 1] == '\0')
+		if ((str[i + 1] == ' ' || str[i + 1] == '\0') && pal <= l_pal)
 		{
 			buffer[pal] = carac + 1;
 			pal++;
@@ -82,12 +82,12 @@ char **strtow(char *str)
 
 	if (str == NULL || str == '\0' || l_pal == NULL)
 		return (NULL);
-	buffer = malloc((pal + 1) * sizeof(char));
+	buffer =  (char **)malloc((pal + 1) * sizeof(char *));
 	if (buffer == NULL)
 		return (NULL);
 	for (i = 0; i < pal; i++)
 	{
-		buffer[i] = malloc((l_pal[i] + 1) * sizeof(char));
+		buffer[i] = (char *)malloc(l_pal[i] * sizeof(char));
 		if (buffer[i] == NULL)
 		{
 			for (i = i - 1; i >= 0; i--)
@@ -96,23 +96,22 @@ char **strtow(char *str)
 			return (NULL);
 		}
 	}
-	/*Rellenamos con los caracteres*/
+	buffer[i] = '\0';
 	for (i = 0, j = 0, r = 0; str[i] != '\0'; i++)
 	{
 		if (str[i] == ' ')
 		{
 			continue;
 		}
-		buffer[j][r] = str[i];
+		buffer[j][r++] = str[i];
 		if (str[i + 1] == ' ' || str[i + 1] == '\0')
 		{
-			buffer[j][++r] = '\0';
+			buffer[j][r] = '\0';
 			j++;
 			r = 0;
 		}
-		else
-			r++;
 	}
 	buffer[j] = NULL;
+	free(l_pal);
 	return (buffer);
 }
