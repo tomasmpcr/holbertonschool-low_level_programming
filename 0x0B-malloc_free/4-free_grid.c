@@ -2,24 +2,17 @@
 #include <stdlib.h>
 
 /**
- *_strdup - duplicate a string
- *@str: char
+ *free_grid - clear matrix spce in memory
+ *@grid: **int
+ *@height: int
  *
- *Return: buffer char
+ *Return: void
  */
-char *_strdup(char *str)
+void free_grid(int **grid, int height)
 {
 	int i;
-	char *buffer;
 
-	buffer = malloc(sizeof(str));
-	if (buffer == NULL)
-		return (NULL);
-
-	for (i = 0; str[i] != '\0'; i++)
-		buffer[i] = str[i];
-
-	buffer[i] = '\0';
-
-	return (buffer);
+	for(i = 0; i < height; i++)
+		free(grid[i]);
+	free(grid);
 }
