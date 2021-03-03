@@ -10,7 +10,7 @@
  */
 int pal_len(char *str)
 {
-	int i, pal = 0, paso = 0;
+	int i, pal = 0, paso = 1;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
