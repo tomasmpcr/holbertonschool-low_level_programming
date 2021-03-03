@@ -76,12 +76,18 @@ int *len_pal(char *str, int l_pal)
  */
 char **strtow(char *str)
 {
-	int i, j, r, pal = pal_len(str);
-	int *l_pal = len_pal(str, pal);
+	int i, j, r, pal;
+	int *l_pal;
 	char **buffer;
 
-	if (str == NULL || str == '\0' || l_pal == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
+
+	pal = pal_len(str);
+	if (pal <= 0)
+		return (NULL);
+	l_pal = len_pal(str, pal);
+
 	buffer =  (char **)malloc((pal + 1) * sizeof(char *));
 	if (buffer == NULL)
 		return (NULL);
@@ -110,7 +116,7 @@ char **strtow(char *str)
 			r = 0;
 		}
 	}
-	buffer[j] = '\0';
+	buffer[j] = NULL;
 	free(l_pal);
 	return (buffer);
 }
