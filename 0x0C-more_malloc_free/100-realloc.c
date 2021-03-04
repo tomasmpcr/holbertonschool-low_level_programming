@@ -13,7 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int i, cal;
 	char *p;
-	char *new_ptr = ptr;
+	char *new_ptr;
 
 	if (ptr == NULL)
 	{
@@ -35,10 +35,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	else
 		cal = new_size;
 
-	p = malloc(cal);
+	p = malloc(new_size);
 	if (p == NULL)
 		return (NULL);
 
+	new_ptr = ptr;
 	for (i = 0; i < cal; i++)
 		p[i] = new_ptr[i];
 
