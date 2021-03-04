@@ -39,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 
 /**
- *strlen - str len the string
+ *_strlen - str len the string
  *@str: string
  *
  *Return: int
