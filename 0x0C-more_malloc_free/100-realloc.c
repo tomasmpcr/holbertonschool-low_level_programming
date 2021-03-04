@@ -16,7 +16,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size > old_size)
 	{
 		p = realloc(ptr, old_size + new_size);
-		free(p);
+		free(ptr);
 		return (p);
 	}
 	else if (new_size == old_size)
