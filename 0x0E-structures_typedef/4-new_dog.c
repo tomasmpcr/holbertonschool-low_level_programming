@@ -9,7 +9,7 @@
  *
  *Return: pointer
  */
-dog_t *new_dog(char *name,__attribute__((unused)) float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *my_dog = malloc(sizeof(dog_t));
 	if (my_dog == NULL)
