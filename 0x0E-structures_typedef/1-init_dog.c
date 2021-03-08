@@ -2,9 +2,10 @@
 
 /**
  *init_dog - init
- *@d
- *@age
- *@owner
+ *@d: struct dog
+ *@name: name dog
+ *@age: age dog
+ *@owner: owner dog
  *
  *Return: 0
  */
