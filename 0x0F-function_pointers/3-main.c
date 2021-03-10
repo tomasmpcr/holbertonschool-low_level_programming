@@ -11,9 +11,8 @@
  */
 int main(int ac, char *av[])
 {
-	int num1, num2, result;
+	int num1, num2;
 	char *op;
-	int (*fun)(int, int);
 
 	if (ac != 4)
 	{
@@ -30,14 +29,6 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 
-	fun = get_op_func(op);
-	if (fun == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	result = fun(num1, num2);
-	printf("%i\n", result);
+	printf("%d\n", get_op_func(op)(num1, num2));
 	return (0);
 }
