@@ -12,7 +12,7 @@
 int main(int ac, char *av[])
 {
 	int num1, num2, result;
-	char *op = av[2];
+	char *op;
 	int (*fun)(int, int);
 
 	if (ac != 4)
@@ -20,6 +20,7 @@ int main(int ac, char *av[])
 		printf("Error\n");
 		return (98);
 	}
+	op = av[2];
 	num1 = atoi(av[1]);
 	num2 = atoi(av[3]);
 
