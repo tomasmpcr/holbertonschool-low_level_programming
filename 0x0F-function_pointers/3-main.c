@@ -18,7 +18,7 @@ int main(int ac, char *av[])
 	if (ac != 4)
 	{
 		printf("Error\n");
-		return (98);
+		exit(98);
 	}
 	op = av[2];
 	num1 = atoi(av[1]);
@@ -27,14 +27,14 @@ int main(int ac, char *av[])
 	if ((op[0] == '/' || op[0] == '%') && num2 == 0)
 	{
 		printf("Error\n");
-		return (100);
+		exit(100);
 	}
 
 	fun = get_op_func(op);
 	if (fun == NULL)
 	{
 		printf("Error\n");
-		return (99);
+		exit(99);
 	}
 
 	result = fun(num1, num2);
