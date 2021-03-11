@@ -9,46 +9,77 @@
  */
 void print_all(const char * const format, ...)
 {
+	va_list ap;
+	int i = 0, j = 0;
 
+	s_dt dt[] = {
+	{"c", pr_char},
+	{"i", pr_int},
+	{"f", pr_float},
+	{"s", pr_char_p},
+	{NULL, NULL}
+	};
 
-
-	printf("%i\n", format);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*	va_list ap;
-	int i, len;
-	char *x;
-
-	if (separator == NULL)
-		return;
-
-	len = n;
-
-	va_start(ap, n);
-	for (i = 0; i < len; i++)
+	va_start(ap, format);
+	while (format[i] != '\0')
 	{
-		x = va_arg(ap, char*);
-		printf("%s", x);
-		if (i != (len - 1))
-			printf(", ");
+		j = 0;
+		while (dt[j].l != NULL)
+		{
+			if (dt[j].l[0] == format[i])
+			{
+				dt[j].f(ap);
+				if (format[i+1] != '\0')
+					printf(", ");
+			}
+			j++;
+		}
+		i++;
 	}
+	printf("\n");
 	va_end(ap);
-	printf("\n");*/
+}
+
+/**
+ *pr_char - print
+ *@p: void
+ *
+ *Return: void
+ */
+void pr_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ *pr_int - print
+ *@p: void
+ *
+ *Return: void
+ */
+void pr_int(va_list ap)
+{
+	printf("%i", va_arg(ap, int));
+}
+
+/**
+ *pr_float - print
+ *@p: void
+ *
+ *Return: void
+ */
+void pr_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ *pr_char_p - print
+ *@p: void
+ *
+ *Return: void
+ */
+void pr_char_p(va_list ap)
+{
+	printf("%s", va_arg(ap, char *));
 }
