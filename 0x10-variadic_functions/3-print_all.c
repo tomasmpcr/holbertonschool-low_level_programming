@@ -86,9 +86,9 @@ void pr_char_p(va_list ap)
 
 	if (ram == NULL)
 	{
-		printf("(mil)");
+		printf("(nil)");
 		return;
 	}
 
-	printf("%s", );
+	printf("%s", ram);
 }
