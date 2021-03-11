@@ -82,5 +82,13 @@ void pr_float(va_list ap)
  */
 void pr_char_p(va_list ap)
 {
-	printf("%s", va_arg(ap, char *));
+	char *ram = va_arg(ap, char *);
+
+	if (ram == NULL)
+	{
+		printf("(mil)");
+		return;
+	}
+
+	printf("%s", );
 }
