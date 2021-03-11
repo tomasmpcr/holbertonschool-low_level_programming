@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 			if (dt[j].l[0] == format[i])
 			{
 				dt[j].f(ap);
-				if (format[i+1] != '\0')
+				if (format[i + 1] != '\0')
 					printf(", ");
 			}
 			j++;
@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 
 /**
  *pr_char - print
- *@p: void
+ *@ap: void
  *
  *Return: void
  */
@@ -53,7 +53,7 @@ void pr_char(va_list ap)
 
 /**
  *pr_int - print
- *@p: void
+ *@ap: void
  *
  *Return: void
  */
@@ -64,7 +64,7 @@ void pr_int(va_list ap)
 
 /**
  *pr_float - print
- *@p: void
+ *@ap: void
  *
  *Return: void
  */
@@ -75,7 +75,7 @@ void pr_float(va_list ap)
 
 /**
  *pr_char_p - print
- *@p: void
+ *@ap: void
  *
  *Return: void
  */
