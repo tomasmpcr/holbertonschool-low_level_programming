@@ -82,7 +82,9 @@ void pr_float(va_list ap)
  */
 void pr_char_p(va_list ap)
 {
-	char *ram = va_arg(ap, char *);
+	char *ram;
+	
+	ram = va_arg(ap, char *);
 
 	if (ram == NULL)
 	{
