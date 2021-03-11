@@ -11,6 +11,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i = 0, j = 0;
+	char *sep = "";
 
 	s_dt dt[] = {
 	{"c", pr_char},
@@ -28,9 +29,9 @@ void print_all(const char * const format, ...)
 		{
 			if (dt[j].l[0] == format[i])
 			{
+				printf("%s", sep);
 				dt[j].f(ap);
-				if (format[i + 1] != '\0')
-					printf(", ");
+				sep = ", ";
 			}
 			j++;
 		}
@@ -81,5 +82,10 @@ void pr_float(va_list ap)
  */
 void pr_char_p(va_list ap)
 {
-	printf("%s", va_arg(ap, char *));
+	char *ram = va_arg(ap, char *);
+
+	if (ram == NULL)
+		printf("(nil)");
+	else
+		printf("%s", ram);
 }
