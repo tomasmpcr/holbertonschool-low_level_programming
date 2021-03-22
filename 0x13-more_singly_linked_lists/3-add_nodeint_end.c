@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *add_nodeint_end - add a new node
 *@head: pointer
 *@n: is a number
@@ -29,7 +29,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		h = *head;
 
 	/* Add a new node in the list¿? */
-	for(; h->next != NULL;)
+	for (; h->next != NULL;)
 	{
 		h = h->next;
 	}

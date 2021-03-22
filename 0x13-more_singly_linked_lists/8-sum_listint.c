@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *sum_listint - sum the number n int the nodes
 *@head: the prinsipal node
 *

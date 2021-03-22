@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *insert_nodeint_at_index - insert the node int index
 *@head: the prinsipal node
 *@idx: index node insert

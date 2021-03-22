@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *get_nodeint_at_index - fget th node
 *@head: the prinsipal node
 *@index: the index node extract

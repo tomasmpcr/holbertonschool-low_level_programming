@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *listint_len - print the size
 *@h: pointer to the struct
 *

@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *print_listint - print tthe number in the struct andn next
 *@h: pointer to the struct
 *

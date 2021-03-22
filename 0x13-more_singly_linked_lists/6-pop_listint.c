@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *pop_listint - delete the first element
 *@head: the prinsipal node
 *

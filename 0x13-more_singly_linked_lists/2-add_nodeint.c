@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *add_nodeint - add the new node in header
 *@head: pointer
 *@n: is a number

@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *delete_nodeint_at_index - delete node at index
 *@head: the prinsipal node
 *@index: index node delete
@@ -20,7 +20,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index > 0)
 	{
 		for (i = 0; i < (index - 1); i++)
- 		{
+		{
 			ram = ram->next;
 			if (ram == NULL)
 				return (-1);

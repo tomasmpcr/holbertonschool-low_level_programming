@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
 *free_listint - feree int the struct
 *@head: pointer to the struct
 *
