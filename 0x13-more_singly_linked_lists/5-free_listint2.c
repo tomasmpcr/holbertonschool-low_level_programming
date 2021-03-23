@@ -12,13 +12,17 @@ void free_listint2(listint_t **head)
 	listint_t *ram;
 
 	h = *head;
-	for (; 1 == 1;)
+
+	if (h != NULL)
 	{
-		ram = h;
-		h = (*h).next;
-		free(ram);
-		if (h == NULL)
-			break;
+		for (; 1 == 1;)
+		{
+			ram = h;
+			h = (*h).next;
+			free(ram);
+			if (h == NULL)
+				break;
+		}
+		*head = NULL;
 	}
-	*head = NULL;
 }
