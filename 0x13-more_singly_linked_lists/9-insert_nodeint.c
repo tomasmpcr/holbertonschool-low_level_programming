@@ -14,7 +14,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *ram;
 	unsigned int i;
 
-	if (head == NULL || *head == NULL)
+	if (head == NULL)
 		return (NULL);
 
 	/* Create a new node */
@@ -22,23 +22,32 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (node_new == NULL)
 		return (NULL);
 
-	/* Serch the node insert */
-	if (*head == NULL)
-		return (NULL);
-
-	ram = *head;
-	for (i = 0; i < (idx - 1); i++)
-	{
-		ram = ram->next;
-		if (ram == NULL)
-			return (NULL);
-	}
-
-	/* Assign values the new node */
 	node_new->n = n;
-	node_new->next = ram->next;
+	node_new->next = NULL;
 
-	ram->next = node_new;
+	if (idx > 0)
+	{
+		/* Serch the node insert */
+		if (*head == NULL)
+			return (NULL);
+
+		ram = *head;
+		for (i = 0; i < (idx - 1); i++)
+		{
+			ram = ram->next;
+			if (ram == NULL)
+				return (NULL);
+		}
+
+		/* Assign values the new node */
+		node_new->next = ram->next;
+
+		ram->next = node_new;
+	}
+	else
+	{
+		*head = node_new;
+	}
 
 	return (node_new);
 }
