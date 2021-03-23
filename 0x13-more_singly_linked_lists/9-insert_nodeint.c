@@ -16,21 +16,17 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (head == NULL)
 		return (NULL);
-
 	/* Create a new node */
 	node_new = malloc(sizeof(listint_t));
 	if (node_new == NULL)
 		return (NULL);
-
 	node_new->n = n;
 	node_new->next = NULL;
-
 	if (idx > 0)
 	{
 		/* Serch the node insert */
 		if (*head == NULL)
 			return (NULL);
-
 		ram = *head;
 		for (i = 0; i < (idx - 1); i++)
 		{
@@ -38,10 +34,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			if (ram == NULL)
 				return (NULL);
 		}
-
 		/* Assign values the new node */
 		node_new->next = ram->next;
-
 		ram->next = node_new;
 	}
 	else
@@ -55,6 +49,5 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			*head = node_new;
 		}
 	}
-
 	return (node_new);
 }
