@@ -10,15 +10,15 @@ void free_listint(listint_t *head)
 {
 	listint_t *ram;
 
-	if (head == NULL)
-		return (NULL);
-
-	for (; 1 == 1;)
+	if (head != NULL)
 	{
-		ram = head;
-		head = (*head).next;
-		free(ram);
-		if (head == NULL)
-			break;
+		for (; 1 == 1;)
+		{
+			ram = head;
+			head = (*head).next;
+			free(ram);
+			if (head == NULL)
+				break;
+		}
 	}
 }
