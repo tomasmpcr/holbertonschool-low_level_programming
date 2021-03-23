@@ -10,6 +10,9 @@ void free_listint(listint_t *head)
 {
 	listint_t *ram;
 
+	if (head == NULL)
+		return (NULL);
+
 	for (; 1 == 1;)
 	{
 		ram = head;
