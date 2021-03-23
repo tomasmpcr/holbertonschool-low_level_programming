@@ -46,7 +46,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	else
 	{
-		*head = node_new;
+		if (*head == NULL)
+			*head = node_new;
+		else
+		{
+			ram = *head;
+			node_new->next = ram;
+			*head = node_new;
+		}
 	}
 
 	return (node_new);
