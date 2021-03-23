@@ -11,10 +11,10 @@ void free_listint2(listint_t **head)
 	listint_t *h;
 	listint_t *ram;
 
-	h = *head;
-
 	if (head == NULL)
 		return;
+
+	h = *head;
 
 	if (h != NULL)
 	{
