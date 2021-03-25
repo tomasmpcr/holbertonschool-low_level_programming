@@ -10,7 +10,7 @@ void print_binary_r(unsigned long int n)
 {
 	unsigned long int ram;
 
-	if(n == 0)
+	if (n == 0)
 		return;
 
 	ram = n & 1;
@@ -24,13 +24,13 @@ void print_binary_r(unsigned long int n)
 
 /**
  *print_binary - print binary number
- *@b: the number unsigned Ãlong int
+ *@n: the number unsigned Ãlong int
  *
  *Return: void
 */
 void print_binary(unsigned long int n)
 {
-	if(n == 0)
+	if (n == 0)
 	{
 		_putchar('0');
 		return;
