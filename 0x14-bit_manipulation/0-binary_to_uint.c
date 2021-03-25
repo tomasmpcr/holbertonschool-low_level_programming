@@ -31,9 +31,9 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = _strlen(b); i > 0; i--)
 	{
-		if (b[i-1] == '0' || b[i-1] == '1')
+		if (b[i - 1] == '0' || b[i - 1] == '1')
 		{
-			if (b[i-1] == '1')
+			if (b[i - 1] == '1')
 			{
 				num += tab;
 			}
