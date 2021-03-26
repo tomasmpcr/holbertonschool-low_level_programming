@@ -18,7 +18,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 
 	fil = fil << index;
 
-	*n = *n ^ fil;
+	*n = *n | fil;
 
 	return (1);
 }
