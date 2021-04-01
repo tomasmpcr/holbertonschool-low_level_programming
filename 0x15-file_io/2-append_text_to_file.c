@@ -1,20 +1,20 @@
 #include "holberton.h"
 
 /**
-*create_file - create file
+*append_text_to_file - add text
 *@filename: name of file
 *@text_content: string print
 *
 *Return: letters prints
 */
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fd = 0, i = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	fd = open(filename, O_RDWR | O_APPEND);
 	if (fd == -1)
 		return (-1);
 
@@ -22,7 +22,6 @@ int create_file(const char *filename, char *text_content)
 	{
 		if (write(fd, &text_content[i], 1) == -1)
 		{
-			printf("FALLO");
 			close(fd);
 			return (-1);
 		}
