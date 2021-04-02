@@ -25,7 +25,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 
-	fd2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 664);
+	fd2 = open(av[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd2 < 0)
 	{
 		dprintf(2, "Error: Can't write to %s\n", av[2]);
