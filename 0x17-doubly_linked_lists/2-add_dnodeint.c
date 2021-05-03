@@ -5,7 +5,8 @@
 
 /**
 * add_dnodeint - adds a new node at the beginning of a dlistint_t list.
-* @h: head nodo
+* @head: head nodo
+* @n: num to new node
 * ----------------------------------------------------------------
 * Return: the point dlistint_t
 */
