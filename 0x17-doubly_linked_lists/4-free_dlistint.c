@@ -10,17 +10,17 @@
 */
 void free_dlistint(dlistint_t *head)
 {
-    dlistint_t *next = NULL;
+	dlistint_t *next = NULL;
 
-    if (head == NULL)
-    {
-        return;
-    }
+	if (head == NULL)
+	{
+		return;
+	}
 
 	for (; head;)
-    {
-        next = head->next;
-        free(head);
-        head = next;
-    }
+	{
+		next = head->next;
+		free(head);
+		head = next;
+	}
 }
