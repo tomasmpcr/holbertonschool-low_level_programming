@@ -3,6 +3,8 @@
 #include <stdio.h>
 #include "lists.h"
 
+dlistint_t *_new_node(int n);
+
 /**
 * insert_dnodeint_at_index - insert node in index
 * @h: head nodo
@@ -14,22 +16,13 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
-	dlistint_t *new_node = NULL;
-	dlistint_t *current = NULL;
-	dlistint_t *prev = NULL;
+	dlistint_t *new_node = NULL, *current = *h, *prev = NULL;
 
 	if (h == NULL)
 		return (NULL);
-	current = *h;
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (new_node == NULL)
+	new_node = _new_node(n);
+	if (!new_node)
 		return (NULL);
-
-	new_node->n = n;
-	new_node->next = NULL;
-	new_node->prev = NULL;
-
 	for (i = 0; 1 == 1; i++)
 	{
 		if (i == idx)
@@ -49,13 +42,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 				prev->next = new_node;
 				new_node->prev = prev;
 			}
-
 			if (idx == 0)
 				*h = new_node;
-
 			return (new_node);
 		}
-
 		if (current != NULL)
 		{
 			prev = current;
@@ -64,7 +54,26 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		else
 			break;
 	}
-
 	free(new_node);
 	return (NULL);
+}
+
+/**
+* _new_node - new node
+* @n: value n in new node
+* ----------------------------------------------------------------
+* Return: new node
+*/
+dlistint_t *_new_node(int n)
+{
+	dlistint_t *new_node = NULL;
+
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = n;
+	new_node->next = NULL;
+	new_node->prev = NULL;
+
+	return (new_node);
 }
