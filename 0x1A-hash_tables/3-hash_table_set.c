@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node = NULL;
 
 	if ((ht == NULL || ht->array == NULL) || key == NULL || value == NULL)
-		return (0)
+		return (0);
 
 	idx = key_index((const unsigned char *) key, ht->size);
 	head = ht->array[idx];
