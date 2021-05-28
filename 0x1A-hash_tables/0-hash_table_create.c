@@ -2,7 +2,9 @@
 
 /**
 * hash_table_create - Function that creates a hash table.
-*   
+* @size: asd
+* ------------------------------------------------------
+* Return: fin
 */
 hash_table_t *hash_table_create(unsigned long int size)
 {
