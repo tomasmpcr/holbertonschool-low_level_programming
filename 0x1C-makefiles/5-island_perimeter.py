@@ -3,6 +3,7 @@
     Technical interview preparation
 """
 
+
 def island_perimeter(grid):
     count = 0
 
