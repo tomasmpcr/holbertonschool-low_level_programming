@@ -5,6 +5,7 @@
 
 
 def island_perimeter(grid):
+    """ that returns the perimeter of the island described in grid """
     count = 0
 
     for i in range(1, len(grid) - 1):
