@@ -34,17 +34,17 @@ int binary_rec(int *array, size_t i_i, size_t i_f, int value)
 {
 	size_t mid;
 
-        if (array == NULL || i_i >= i_f)
+        if (array == NULL || i_i > i_f)
                 return (-1);
 
-        mid = ((i_f - i_i) / 2) + i_i;
+	print_array(array, i_i, i_f + 1);
 
-	print_array(array, i_i, i_f);
+        mid = i_i + ((i_f - i_i) / 2);
 
         if (array[mid] == value)
                 return (mid);
-        else if (array[mid] > value)
-                return (binary_rec(array, i_i, i_f - mid - 1, value));
+        else if (value < array[mid])
+                return (binary_rec(array, i_i, mid - 1, value));
         else
                 return (binary_rec(array, mid + 1, i_f, value));
 
@@ -61,6 +61,5 @@ int binary_rec(int *array, size_t i_i, size_t i_f, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	return (binary_rec(array, 0, size, value));
+	return (binary_rec(array, 0, size - 1, value));
 }
-
