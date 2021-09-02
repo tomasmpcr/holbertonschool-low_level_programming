@@ -5,8 +5,8 @@
 /**
  *print_array - ASD ASDASDADASD
  *@array: ASD
- *@size: ASDASD
- *@value: ASD DF
+ *@i_i: ASDASD
+ *@i_f: ASD DF
  *----------------------------------------------------
  *Return: INT
  */
@@ -25,7 +25,8 @@ void print_array(int *array, size_t i_i, size_t i_f)
 /**
  *binary_rec - ASD ASDASDADASD
  *@array: ASD
- *@size: ASDASD
+ *@i_i: ASDASD
+ *@i_f: ASD ASD
  *@value: ASD DF
  *----------------------------------------------------
  *Return: INT
@@ -34,21 +35,21 @@ int binary_rec(int *array, size_t i_i, size_t i_f, int value)
 {
 	size_t mid;
 
-        if (array == NULL || i_i > i_f)
-                return (-1);
+	if (array == NULL || i_i > i_f)
+		return (-1);
 
 	print_array(array, i_i, i_f + 1);
 
-        mid = i_i + ((i_f - i_i) / 2);
+	mid = i_i + ((i_f - i_i) / 2);
 
-        if (array[mid] == value)
-                return (mid);
-        else if (value < array[mid])
-                return (binary_rec(array, i_i, mid - 1, value));
-        else
-                return (binary_rec(array, mid + 1, i_f, value));
+	if (array[mid] == value)
+		return (mid);
+	else if (value < array[mid])
+		return (binary_rec(array, i_i, mid - 1, value));
+	else
+		return (binary_rec(array, mid + 1, i_f, value));
 
-        return (-1);
+	return (-1);
 }
 
 /**
