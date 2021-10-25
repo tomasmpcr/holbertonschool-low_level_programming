@@ -1,16 +1,16 @@
 #include "search_algos.h"
 
 /**
- * jump_search - ASDAFSSGSFSG
- * @array: ARRAY
- * @size: LE
- * @value: CALUE
- * Return: -1
+ * jump_search - ASDASD
+ * @array: ASASD
+ * @size: ASDASD
+ * @value: ASAS
+ * Return: ASDASDD
  */
 
 int jump_search(int *array, size_t size, int value)
 {
-	size_t asd = sqrt(size), pos = 0;
+	size_t gap = sqrt(size), pos = 0;
 
 	if (!array)
 		return (-1);
@@ -18,12 +18,12 @@ int jump_search(int *array, size_t size, int value)
 	printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
 	if (array[0] > value)
 		return (-1);
-	while (pos + asd < size && value > array[pos + asd])
+	while (pos + gap < size && value > array[pos + gap])
 	{
-		printf("Value checked array[%lu] = [%d]\n", pos + asd, array[pos + asd]);
-		pos += asd;
+		printf("Value checked array[%lu] = [%d]\n", pos + gap, array[pos + gap]);
+		pos += gap;
 	}
-	printf("Value found between indexes [%lu] and [%lu]\n", pos, pos + asd);
+	printf("Value found between indexes [%lu] and [%lu]\n", pos, pos + gap);
 	while (size > pos)
 	{
 		printf("Value checked array[%lu] = [%d]\n", pos, array[pos]);
