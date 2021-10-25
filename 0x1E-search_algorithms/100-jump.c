@@ -2,6 +2,19 @@
 #include <math.h>
 
 /**
+ * test1 - ASDASDASD
+ * @primero: ASDASD
+ * @segundo: ASDASD
+ * Return: LA
+ */
+size_t test1(size_t primero, size_t segundo)
+{
+	if (segundo < primero)
+		return (segundo);
+	return (primero);
+}
+
+/**
  * jump_search - ASFDFFDDFDF
  * @array: ASDFASFAF
  * @size: ADSFAS
@@ -44,17 +57,4 @@ int jump_search(int *array, size_t size, int value)
 		}
 	}
 	return (-1);
-}
-
-/**
- * test1 - ASDASDASD
- * @primero: ASDASD
- * @segundo: ASDASD
- * Return: LA
- */
-size_t test1(size_t primero, size_t segundo)
-{
-	if (segundo < primero)
-		return (segundo);
-	return (primero);
 }
